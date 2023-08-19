@@ -7,7 +7,16 @@ spring:
     hibernate:
       naming: 
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      # ddl-auto: create-drop
+    # defer-datasource-initialization: true
+
 
   datasource:
     # url: ?useSSL=false&allowPublicKeyRetrieval=true
     url: jdbc:mysql://localhost/DemosecDB
+
+  # sql:
+    # init:
+      # mode: always
+      # data-locations:
+        # - classpath: data.sql
