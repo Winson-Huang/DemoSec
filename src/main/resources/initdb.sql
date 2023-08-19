@@ -6,6 +6,6 @@ CREATE TABLE DemosecUser (
     emailaddress VARCHAR(64) NOT NULL
 );
 
-INSERT INTO DemosecUser(username, password, emailaddress) VALUES
-('Alice', 'secret', 'alice@alice.org'),
-('Bob', 'secret', 'bob@alice.org');
+-- INSERT INTO DemosecUser(username, password, emailaddress) VALUES
+-- ('Alice', 'secret', 'alice@alice.org'),
+-- ('Bob', 'secret', 'bob@alice.org');

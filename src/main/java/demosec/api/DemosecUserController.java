@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,6 +30,9 @@ public class DemosecUserController {
     @Autowired
     DemosecUserRepo demosecUserRepo;
 
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
 
     @GetMapping
     public List<DemosecUser> getAllUser() {
@@ -46,7 +50,7 @@ public class DemosecUserController {
     public DemosecUser registerUser(@RequestBody DemosecUserForm userForm) {
         DemosecUser user = new DemosecUser(
             userForm.getUsername(), 
-            userForm.getPassword(), 
+            passwordEncoder.encode(userForm.getPassword()),
             userForm.getEmailaddress()
         );
         return demosecUserRepo.save(user);
