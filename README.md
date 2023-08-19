@@ -1,5 +1,7 @@
 # Demosec
 
+To config datasource, copy `application-secret-example.yml` as `application-secret.yml` and fill information.
+
 Manually create a database BasicDB before start the application, drop the database after stop the application:
 
 ```sql
