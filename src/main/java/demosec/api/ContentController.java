@@ -10,6 +10,6 @@ public class ContentController {
 
     @GetMapping
     public String contentNeedAuth() {
-        return "This message only available to authed users.\n";
+        return "You are an authed user.\n";
     }
 }
