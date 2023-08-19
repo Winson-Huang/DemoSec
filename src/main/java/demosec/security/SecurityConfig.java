@@ -8,4 +8,8 @@ import org.springframework.context.annotation.Configuration;
 @EnableAutoConfiguration(exclude = {SecurityAutoConfiguration.class})
 public class SecurityConfig {
     
+    public static final String ROLE_PREFIX = "ROLE_";
+
+    public static final String USER_ROLE = "USER";
+
 }
